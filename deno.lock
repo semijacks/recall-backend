@@ -3,66 +3,92 @@
   "packages": {
     "specifiers": {
       "jsr:@hono/hono@^4.6.1": "jsr:@hono/hono@4.6.1",
-      "jsr:@std/assert@1": "jsr:@std/assert@1.0.5",
-      "jsr:@std/cli@^1.0.6": "jsr:@std/cli@1.0.6",
       "jsr:@std/dotenv": "jsr:@std/dotenv@0.225.2",
-      "jsr:@std/encoding@^1.0.5": "jsr:@std/encoding@1.0.5",
-      "jsr:@std/fmt@^1.0.2": "jsr:@std/fmt@1.0.2",
-      "jsr:@std/http@1": "jsr:@std/http@1.0.6",
-      "jsr:@std/internal@^1.0.3": "jsr:@std/internal@1.0.3",
-      "jsr:@std/media-types@^1.0.3": "jsr:@std/media-types@1.0.3",
-      "jsr:@std/net@^1.0.3": "jsr:@std/net@1.0.4",
-      "jsr:@std/path@^1.0.5": "jsr:@std/path@1.0.6",
-      "jsr:@std/streams@^1.0.5": "jsr:@std/streams@1.0.5"
+      "npm:@neondatabase/serverless": "npm:@neondatabase/serverless@0.9.5",
+      "npm:drizzle-orm@0.33.0": "npm:drizzle-orm@0.33.0_@neondatabase+serverless@0.9.5"
     },
     "jsr": {
       "@hono/hono@4.6.1": {
         "integrity": "993704e3a2fa8e965c2fa46c57fc038bd277e781a982d3bf0fb278f6671b195f"
       },
-      "@std/assert@1.0.5": {
-        "integrity": "e37da8e4033490ce613eec4ac1d78dba1faf5b02a3f6c573a28f15365b9b440f",
-        "dependencies": [
-          "jsr:@std/internal@^1.0.3"
-        ]
-      },
-      "@std/cli@1.0.6": {
-        "integrity": "d22d8b38c66c666d7ad1f2a66c5b122da1704f985d3c47f01129f05abb6c5d3d"
-      },
       "@std/dotenv@0.225.2": {
         "integrity": "e2025dce4de6c7bca21dece8baddd4262b09d5187217e231b033e088e0c4dd23"
+      }
+    },
+    "npm": {
+      "@neondatabase/serverless@0.9.5": {
+        "integrity": "sha512-siFas6gItqv6wD/pZnvdu34wEqgG3nSE6zWZdq5j2DEsa+VvX8i/5HXJOo06qrw5axPXn+lGCxeR+NLaSPIXug==",
+        "dependencies": {
+          "@types/pg": "@types/pg@8.11.6"
+        }
       },
-      "@std/encoding@1.0.5": {
-        "integrity": "ecf363d4fc25bd85bd915ff6733a7e79b67e0e7806334af15f4645c569fefc04"
+      "@types/node@18.16.19": {
+        "integrity": "sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==",
+        "dependencies": {}
       },
-      "@std/fmt@1.0.2": {
-        "integrity": "87e9dfcdd3ca7c066e0c3c657c1f987c82888eb8103a3a3baa62684ffeb0f7a7"
+      "@types/pg@8.11.6": {
+        "integrity": "sha512-/2WmmBXHLsfRqzfHW7BNZ8SbYzE8OSk7i3WjFYvfgRHj7S1xj+16Je5fUKv3lVdVzk/zn9TXOqf+avFCFIE0yQ==",
+        "dependencies": {
+          "@types/node": "@types/node@18.16.19",
+          "pg-protocol": "pg-protocol@1.6.1",
+          "pg-types": "pg-types@4.0.2"
+        }
       },
-      "@std/http@1.0.6": {
-        "integrity": "20a6f3fa4a914fbb19ea96572f2519b656232597092581ed706cd865d842d0d0",
-        "dependencies": [
-          "jsr:@std/cli@^1.0.6",
-          "jsr:@std/encoding@^1.0.5",
-          "jsr:@std/fmt@^1.0.2",
-          "jsr:@std/media-types@^1.0.3",
-          "jsr:@std/net@^1.0.3",
-          "jsr:@std/path@^1.0.5",
-          "jsr:@std/streams@^1.0.5"
-        ]
+      "drizzle-orm@0.33.0_@neondatabase+serverless@0.9.5": {
+        "integrity": "sha512-SHy72R2Rdkz0LEq0PSG/IdvnT3nGiWuRk+2tXZQ90GVq/XQhpCzu/EFT3V2rox+w8MlkBQxifF8pCStNYnERfA==",
+        "dependencies": {
+          "@neondatabase/serverless": "@neondatabase/serverless@0.9.5"
+        }
       },
-      "@std/internal@1.0.3": {
-        "integrity": "208e9b94a3d5649bd880e9ca38b885ab7651ab5b5303a56ed25de4755fb7b11e"
+      "obuf@1.1.2": {
+        "integrity": "sha512-PX1wu0AmAdPqOL1mWhqmlOd8kOIZQwGZw6rh7uby9fTc5lhaOWFLX3I6R1hrF9k3zUY40e6igsLGkDXK92LJNg==",
+        "dependencies": {}
       },
-      "@std/media-types@1.0.3": {
-        "integrity": "b12d30a7852f7578f4d210622df713bbfd1cbdd9b4ec2eaf5c1845ab70bab159"
+      "pg-int8@1.0.1": {
+        "integrity": "sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==",
+        "dependencies": {}
       },
-      "@std/net@1.0.4": {
-        "integrity": "2f403b455ebbccf83d8a027d29c5a9e3a2452fea39bb2da7f2c04af09c8bc852"
+      "pg-numeric@1.0.2": {
+        "integrity": "sha512-BM/Thnrw5jm2kKLE5uJkXqqExRUY/toLHda65XgFTBTFYZyopbKjBe29Ii3RbkvlsMoFwD+tHeGaCjjv0gHlyw==",
+        "dependencies": {}
       },
-      "@std/path@1.0.6": {
-        "integrity": "ab2c55f902b380cf28e0eec501b4906e4c1960d13f00e11cfbcd21de15f18fed"
+      "pg-protocol@1.6.1": {
+        "integrity": "sha512-jPIlvgoD63hrEuihvIg+tJhoGjUsLPn6poJY9N5CnlPd91c2T18T/9zBtLxZSb1EhYxBRoZJtzScCaWlYLtktg==",
+        "dependencies": {}
       },
-      "@std/streams@1.0.5": {
-        "integrity": "74e5c73d7d68eeab0d7fba3b05cbee3ba4ac5ae37c5f4e675f67e62f8f53edc4"
+      "pg-types@4.0.2": {
+        "integrity": "sha512-cRL3JpS3lKMGsKaWndugWQoLOCoP+Cic8oseVcbr0qhPzYD5DWXK+RZ9LY9wxRf7RQia4SCwQlXk0q6FCPrVng==",
+        "dependencies": {
+          "pg-int8": "pg-int8@1.0.1",
+          "pg-numeric": "pg-numeric@1.0.2",
+          "postgres-array": "postgres-array@3.0.2",
+          "postgres-bytea": "postgres-bytea@3.0.0",
+          "postgres-date": "postgres-date@2.1.0",
+          "postgres-interval": "postgres-interval@3.0.0",
+          "postgres-range": "postgres-range@1.1.4"
+        }
+      },
+      "postgres-array@3.0.2": {
+        "integrity": "sha512-6faShkdFugNQCLwucjPcY5ARoW1SlbnrZjmGl0IrrqewpvxvhSLHimCVzqeuULCbG0fQv7Dtk1yDbG3xv7Veog==",
+        "dependencies": {}
+      },
+      "postgres-bytea@3.0.0": {
+        "integrity": "sha512-CNd4jim9RFPkObHSjVHlVrxoVQXz7quwNFpz7RY1okNNme49+sVyiTvTRobiLV548Hx/hb1BG+iE7h9493WzFw==",
+        "dependencies": {
+          "obuf": "obuf@1.1.2"
+        }
+      },
+      "postgres-date@2.1.0": {
+        "integrity": "sha512-K7Juri8gtgXVcDfZttFKVmhglp7epKb1K4pgrkLxehjqkrgPhfG6OO8LHLkfaqkbpjNRnra018XwAr1yQFWGcA==",
+        "dependencies": {}
+      },
+      "postgres-interval@3.0.0": {
+        "integrity": "sha512-BSNDnbyZCXSxgA+1f5UU2GmwhoI0aU5yMxRGO8CdFEcY2BQF9xm/7MqKnYoM1nJDk8nONNWDk9WeSmePFhQdlw==",
+        "dependencies": {}
+      },
+      "postgres-range@1.1.4": {
+        "integrity": "sha512-i/hbxIE9803Alj/6ytL7UHQxRvZkI9O4Sy+J3HGc4F4oo/2eQAjTSNJ0bfxyse3bH0nuVesCk+3IRLaMtG3H6w==",
+        "dependencies": {}
       }
     }
   },
@@ -72,7 +98,10 @@
       "jsr:@hono/hono@^4.6.1",
       "jsr:@std/assert@1",
       "jsr:@std/dotenv",
-      "jsr:@std/http@1"
+      "jsr:@std/http@1",
+      "npm:@neondatabase/serverless",
+      "npm:drizzle-kit@0.24.2",
+      "npm:drizzle-orm@0.33.0"
     ]
   }
 }
